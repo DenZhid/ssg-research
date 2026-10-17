@@ -1,0 +1,1102 @@
+{
+  "condition": "desktop",
+  "generated_at": "2026-10-17T10:59:19.389725+00:00",
+  "warmup_runs_excluded": 1,
+  "strategies": [
+    "cache-first",
+    "cache-only",
+    "network-first",
+    "network-only",
+    "stale-while-revalidate"
+  ],
+  "descriptive": {
+    "cache-first": {
+      "FCP": {
+        "median": 24.0,
+        "p95": 26.39999999999999,
+        "p99": 28.0,
+        "n": 29
+      },
+      "TTI": {
+        "median": 65.0,
+        "p95": 149.79999999999998,
+        "p99": 158.04,
+        "n": 29
+      },
+      "FID": {
+        "median": 69.0,
+        "p95": 135.0,
+        "p99": 142.76,
+        "n": 29
+      },
+      "TBT": {
+        "median": 3.0,
+        "p95": 68.99999999999999,
+        "p99": 76.75999999999999,
+        "n": 29
+      },
+      "LCP": {
+        "median": 48.0,
+        "p95": 51.0,
+        "p99": 53.879999999999995,
+        "n": 29
+      },
+      "CLS": {
+        "median": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "n": 29
+      }
+    },
+    "cache-only": {
+      "FCP": {
+        "median": 24.0,
+        "p95": 24.0,
+        "p99": 24.0,
+        "n": 29
+      },
+      "TTI": {
+        "median": 57.0,
+        "p95": 141.39999999999998,
+        "p99": 168.59999999999997,
+        "n": 29
+      },
+      "FID": {
+        "median": 53.0,
+        "p95": 125.6,
+        "p99": 135.35999999999999,
+        "n": 29
+      },
+      "TBT": {
+        "median": 0.0,
+        "p95": 60.8,
+        "p99": 69.91999999999999,
+        "n": 29
+      },
+      "LCP": {
+        "median": 49.0,
+        "p95": 52.0,
+        "p99": 52.0,
+        "n": 29
+      },
+      "CLS": {
+        "median": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "n": 29
+      }
+    },
+    "network-first": {
+      "FCP": {
+        "median": 24.0,
+        "p95": 24.0,
+        "p99": 24.0,
+        "n": 29
+      },
+      "TTI": {
+        "median": 821.0,
+        "p95": 825.6,
+        "p99": 826.0,
+        "n": 29
+      },
+      "FID": {
+        "median": 65.0,
+        "p95": 129.0,
+        "p99": 138.92,
+        "n": 29
+      },
+      "TBT": {
+        "median": 2.0,
+        "p95": 79.8,
+        "p99": 94.67999999999998,
+        "n": 29
+      },
+      "LCP": {
+        "median": 821.0,
+        "p95": 825.6,
+        "p99": 826.0,
+        "n": 29
+      },
+      "CLS": {
+        "median": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "n": 29
+      }
+    },
+    "network-only": {
+      "FCP": {
+        "median": 24.0,
+        "p95": 24.0,
+        "p99": 24.0,
+        "n": 29
+      },
+      "TTI": {
+        "median": 820.0,
+        "p95": 826.6,
+        "p99": 828.44,
+        "n": 29
+      },
+      "FID": {
+        "median": 75.0,
+        "p95": 138.2,
+        "p99": 143.88,
+        "n": 29
+      },
+      "TBT": {
+        "median": 14.0,
+        "p95": 72.19999999999999,
+        "p99": 77.88,
+        "n": 29
+      },
+      "LCP": {
+        "median": 820.0,
+        "p95": 826.6,
+        "p99": 828.44,
+        "n": 29
+      },
+      "CLS": {
+        "median": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "n": 29
+      }
+    },
+    "stale-while-revalidate": {
+      "FCP": {
+        "median": 24.0,
+        "p95": 24.0,
+        "p99": 24.0,
+        "n": 29
+      },
+      "TTI": {
+        "median": 58.0,
+        "p95": 148.79999999999998,
+        "p99": 152.16,
+        "n": 29
+      },
+      "FID": {
+        "median": 55.0,
+        "p95": 140.79999999999998,
+        "p99": 144.16,
+        "n": 29
+      },
+      "TBT": {
+        "median": 0.0,
+        "p95": 74.8,
+        "p99": 78.16,
+        "n": 29
+      },
+      "LCP": {
+        "median": 50.0,
+        "p95": 53.0,
+        "p99": 53.72,
+        "n": 29
+      },
+      "CLS": {
+        "median": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "n": 29
+      }
+    }
+  },
+  "pairwise": [
+    {
+      "pair": [
+        "cache-first",
+        "cache-only"
+      ],
+      "metric": "FCP",
+      "mann_whitney": {
+        "u_statistic": 449.5,
+        "p_value": 0.16086005079043797,
+        "effect_size_r": -0.06896551724137923
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "cache-only"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 517.5,
+        "p_value": 0.13316429211532402,
+        "effect_size_r": -0.23067776456599276
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -3.0,
+        "high": 53.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "cache-only"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 518.5,
+        "p_value": 0.1292671189821219,
+        "effect_size_r": -0.23305588585017833
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -1.0,
+        "high": 50.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "cache-only"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 528.0,
+        "p_value": 0.06811411529037549,
+        "effect_size_r": -0.25564803804994063
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 35.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "cache-only"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 305.5,
+        "p_value": 0.07237952324648772,
+        "effect_size_r": 0.2734839476813318
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -3.0,
+        "high": 1.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "cache-only"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-first"
+      ],
+      "metric": "FCP",
+      "mann_whitney": {
+        "u_statistic": 449.5,
+        "p_value": 0.16086005079043797,
+        "effect_size_r": -0.06896551724137923
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-first"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 6.176835151396298e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -764.0,
+        "high": -712.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-first"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 461.0,
+        "p_value": 0.5336622163969095,
+        "effect_size_r": -0.09631391200951245
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -24.0,
+        "high": 42.02499999999998
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-first"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 439.5,
+        "p_value": 0.7629401943194487,
+        "effect_size_r": -0.045184304399524367
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -18.0,
+        "high": 33.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-first"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 5.812278010235745e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -775.0,
+        "high": -771.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-first"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-only"
+      ],
+      "metric": "FCP",
+      "mann_whitney": {
+        "u_statistic": 449.5,
+        "p_value": 0.16086005079043797,
+        "effect_size_r": -0.06896551724137923
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-only"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 5.237180067809743e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -763.0,
+        "high": -711.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-only"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 378.0,
+        "p_value": 0.5135595291974219,
+        "effect_size_r": 0.10107015457788349
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -35.0,
+        "high": 27.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-only"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 370.5,
+        "p_value": 0.43020738432176375,
+        "effect_size_r": 0.11890606420927463
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -30.0,
+        "high": 24.024999999999977
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-only"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 4.923581493252357e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -774.0,
+        "high": -770.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "network-only"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "FCP",
+      "mann_whitney": {
+        "u_statistic": 449.5,
+        "p_value": 0.16086005079043797,
+        "effect_size_r": -0.06896551724137923
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 488.5,
+        "p_value": 0.2935382429693556,
+        "effect_size_r": -0.16171224732461353
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -23.0,
+        "high": 52.07499999999993
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 482.0,
+        "p_value": 0.3426459035662839,
+        "effect_size_r": -0.14625445897740774
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -11.024999999999977,
+        "high": 50.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 491.0,
+        "p_value": 0.24447974612539303,
+        "effect_size_r": -0.16765755053507725
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -3.0,
+        "high": 35.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 237.0,
+        "p_value": 0.004090722745354562,
+        "effect_size_r": 0.4363852556480381
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -4.0,
+        "high": 1.0
+      }
+    },
+    {
+      "pair": [
+        "cache-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-first"
+      ],
+      "metric": "FCP",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-first"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 6.151899288165278e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -770.0,
+        "high": -751.975
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-first"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 325.5,
+        "p_value": 0.14155438116495947,
+        "effect_size_r": 0.22592152199762183
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -37.0,
+        "high": 6.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-first"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 323.0,
+        "p_value": 0.09813892732310862,
+        "effect_size_r": 0.23186682520808566
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -23.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-first"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 5.773004291408319e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -773.0,
+        "high": -770.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-first"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-only"
+      ],
+      "metric": "FCP",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-only"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 5.215721163173422e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -769.0,
+        "high": -750.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-only"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 233.5,
+        "p_value": 0.0037204317587320847,
+        "effect_size_r": 0.4447086801426873
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -43.0,
+        "high": -8.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-only"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 244.5,
+        "p_value": 0.003998036377392045,
+        "effect_size_r": 0.41854934601664684
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -34.0,
+        "high": -6.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-only"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 0.0,
+        "p_value": 4.889814055263449e-11,
+        "effect_size_r": 1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -773.0,
+        "high": -769.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "network-only"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "FCP",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 382.5,
+        "p_value": 0.5589833796084926,
+        "effect_size_r": 0.09036860879904873
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -33.0,
+        "high": 11.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 390.0,
+        "p_value": 0.6406345158813034,
+        "effect_size_r": 0.07253269916765759
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -23.0,
+        "high": 11.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 379.0,
+        "p_value": 0.47039908417975873,
+        "effect_size_r": 0.09869203329369802
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -5.0,
+        "high": 2.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 338.0,
+        "p_value": 0.19564731981280115,
+        "effect_size_r": 0.19619500594530326
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -2.0,
+        "high": 1.0
+      }
+    },
+    {
+      "pair": [
+        "cache-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "network-only"
+      ],
+      "metric": "FCP",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "network-only"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 457.0,
+        "p_value": 0.5699531023870174,
+        "effect_size_r": -0.08680142687277059
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -1.0,
+        "high": 3.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "network-only"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 334.5,
+        "p_value": 0.18353038658183618,
+        "effect_size_r": 0.20451843043995244
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -37.0,
+        "high": 14.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "network-only"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 348.5,
+        "p_value": 0.2545464607133119,
+        "effect_size_r": 0.1712247324613555
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -30.0,
+        "high": 10.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "network-only"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 457.0,
+        "p_value": 0.5699531023870174,
+        "effect_size_r": -0.08680142687277059
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -1.0,
+        "high": 3.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "network-only"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "FCP",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 841.0,
+        "p_value": 6.110542896718105e-11,
+        "effect_size_r": -1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 731.0,
+        "high": 770.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 482.5,
+        "p_value": 0.3386894129818343,
+        "effect_size_r": -0.14744351961950053
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -13.049999999999955,
+        "high": 34.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 484.0,
+        "p_value": 0.29489696585088376,
+        "effect_size_r": -0.1510107015457789
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -3.0,
+        "high": 23.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 841.0,
+        "p_value": 5.5726451088675246e-11,
+        "effect_size_r": -1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 769.0,
+        "high": 773.0
+      }
+    },
+    {
+      "pair": [
+        "network-first",
+        "stale-while-revalidate"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "network-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "FCP",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "pair": [
+        "network-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "TTI",
+      "mann_whitney": {
+        "u_statistic": 841.0,
+        "p_value": 5.1801340903422796e-11,
+        "effect_size_r": -1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 729.0,
+        "high": 769.0
+      }
+    },
+    {
+      "pair": [
+        "network-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "FID",
+      "mann_whitney": {
+        "u_statistic": 572.5,
+        "p_value": 0.018437623970337946,
+        "effect_size_r": -0.36147443519619493
+      },
+      "bootstrap_median_diff_ci": {
+        "low": -3.0,
+        "high": 43.0
+      }
+    },
+    {
+      "pair": [
+        "network-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "TBT",
+      "mann_whitney": {
+        "u_statistic": 560.0,
+        "p_value": 0.02491091513269047,
+        "effect_size_r": -0.33174791914387636
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 2.9750000000000227,
+        "high": 34.0
+      }
+    },
+    {
+      "pair": [
+        "network-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "LCP",
+      "mann_whitney": {
+        "u_statistic": 841.0,
+        "p_value": 4.7175975858321296e-11,
+        "effect_size_r": -1.0
+      },
+      "bootstrap_median_diff_ci": {
+        "low": 768.0,
+        "high": 772.0
+      }
+    },
+    {
+      "pair": [
+        "network-only",
+        "stale-while-revalidate"
+      ],
+      "metric": "CLS",
+      "mann_whitney": null,
+      "bootstrap_median_diff_ci": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    }
+  ]
+}

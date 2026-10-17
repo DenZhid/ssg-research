@@ -1,0 +1,5 @@
+./ssg-research
+./site
+./build
+./dist
+./__pycache__

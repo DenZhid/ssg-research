@@ -1,0 +1,24 @@
+site_name: PWA Cache Strategies Performance
+site_description: Результаты сравнения стратегий кэширования PWA по Web Vitals
+theme:
+  name: mkdocs
+  language: ru
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+markdown_extensions:
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
+nav:
+  - Главная: index.md
+  - Методика: methodology.md
+  - Desktop: conditions/desktop.md
+  - Mobile: conditions/mobile.md
+  - Desktop slow 3G: conditions/desktop-slow3g.md
+  - Mobile slow 3G: conditions/mobile-slow3g.md
+docs_dir: docs
+site_dir: site
