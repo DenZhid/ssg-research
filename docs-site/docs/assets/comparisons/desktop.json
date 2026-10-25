@@ -1,6 +1,6 @@
 {
   "condition": "desktop",
-  "generated_at": "2026-10-25T11:30:35.784884+00:00",
+  "generated_at": "2026-10-25T12:43:09.740614+00:00",
   "warmup_runs_excluded": 1,
   "strategies": [
     "cache-first",

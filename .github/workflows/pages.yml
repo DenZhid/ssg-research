@@ -15,7 +15,7 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
-jobs:
+ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
@@ -27,12 +27,11 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install MkDocs
-        run: pip install "mkdocs>=1.6.1,<2.0.0"
+      - name: Install nox
+        run: pip install nox
 
       - name: Build site
-        working-directory: docs-site
-        run: mkdocs build
+        run: nox -s site
 
       - name: Setup Pages
         uses: actions/configure-pages@v6

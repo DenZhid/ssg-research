@@ -1,6 +1,6 @@
 {
   "condition": "mobile-slow3g",
-  "generated_at": "2026-10-25T11:30:40.275946+00:00",
+  "generated_at": "2026-10-25T12:41:16.576178+00:00",
   "warmup_runs_excluded": 1,
   "strategies": [
     "cache-first",

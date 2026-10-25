@@ -23,3 +23,5 @@ nav:
   - Mobile slow 3G: conditions/mobile-slow3g.md
 docs_dir: docs
 site_dir: site
+hooks:
+  - hooks.py
