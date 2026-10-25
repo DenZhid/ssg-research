@@ -1,4 +1,4 @@
-name: Publish site to GitHub Pages
+name: Publish site
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  actions: read
+  actions: write
 
 concurrency:
   group: pages
@@ -42,6 +42,14 @@ jobs:
         with:
           path: docs-site/site
 
+      - name: Upload site for Helios
+        uses: actions/upload-artifact@v7
+        with:
+          name: helios-site
+          path: docs-site/site
+          retention-days: 1
+          if-no-files-found: error
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -52,3 +60,44 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  deploy-helios:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download site
+        uses: actions/download-artifact@v8
+        with:
+          name: helios-site
+          path: site
+
+      # Secrets: HELIOS_USER (sXXXXXX), HELIOS_SSH_KEY (private deploy key).
+      # Public key goes into ~/.ssh/authorized_keys on Helios once.
+      - name: Upload site to Helios public_html/ssg-research
+        env:
+          HELIOS_USER: ${{ secrets.HELIOS_USER }}
+          HELIOS_SSH_KEY: ${{ secrets.HELIOS_SSH_KEY }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${HELIOS_USER}" ] || [ -z "${HELIOS_SSH_KEY}" ]; then
+            echo "Add repository secrets HELIOS_USER and HELIOS_SSH_KEY."
+            exit 1
+          fi
+
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$HELIOS_SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p 2222 helios.cs.ifmo.ru > ~/.ssh/known_hosts
+          if [ ! -s ~/.ssh/known_hosts ]; then
+            echo "Could not fetch the Helios host key."
+            exit 1
+          fi
+
+          ssh_opts=(-i "$HOME/.ssh/id_ed25519" -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes)
+          target="${HELIOS_USER}@helios.cs.ifmo.ru"
+
+          tar -C site -cf site.tar .
+          scp "${ssh_opts[@]}" -P 2222 site.tar "${target}:ssg-research-site.tar"
+          ssh "${ssh_opts[@]}" -p 2222 "$target" \
+            "rm -rf ~/public_html/ssg-research && mkdir -p ~/public_html/ssg-research && tar -C ~/public_html/ssg-research -xf ~/ssg-research-site.tar && rm -f ~/ssg-research-site.tar && chmod 755 ~/public_html ~/public_html/ssg-research && chmod -R a+rX ~/public_html/ssg-research"
