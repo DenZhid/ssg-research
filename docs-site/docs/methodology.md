@@ -2,7 +2,7 @@
 
 ## Источник данных
 
-Прогоны Playwright / LHCI-подобных flow-тестов сохраняются как `flow-<profile>-*_metrics.json` в папках стратегий. Имя файла задаёт условие эксперимента, имя папки — стратегию кэширования.
+Прогоны Playwright / LHCI-подобных flow-тестов сохраняются как `flow-<profile>-*_metrics.json` в `input/<стратегия>/`. Имя файла задаёт условие эксперимента, имя папки — стратегию кэширования.
 
 | Префикс в имени файла | Условие |
 |-----------------------|---------|
@@ -57,11 +57,11 @@
 ## Пайплайн
 
 ```text
-JSON-отчёты → analyze_reports.py → charts/ + comparisons/
-                                      ↓
-                              sync_docs_assets.py
-                                      ↓
-                              generate_docs.py → conditions/*.md
-                                      ↓
-                                 mkdocs build
+input/<strategy>/*.json → analyze_reports.py → output/charts/ + output/comparisons/
+                                                    ↓
+                                            sync_docs_assets.py → docs/assets/
+                                                    ↓
+                                            generate_docs.py → conditions/*.md
+                                                    ↓
+                                               mkdocs build
 ```

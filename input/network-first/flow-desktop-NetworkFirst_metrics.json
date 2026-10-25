@@ -1,0 +1,426 @@
+{
+  "baseUrl": "http://localhost:4173",
+  "finishedAt": "2026-06-24T08:01:21.076Z",
+  "runs": [
+    {
+      "run": 1,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 1305,
+          "Time to Interactive": 2912,
+          "First Input Delay": 354,
+          "Total Blocking Time": 51,
+          "Largest Contentful Paint": 2912,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 826,
+          "First Input Delay": 67,
+          "Total Blocking Time": 2,
+          "Largest Contentful Paint": 826,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 818,
+          "First Input Delay": 106,
+          "Total Blocking Time": 50,
+          "Largest Contentful Paint": 818,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 824,
+          "First Input Delay": 74,
+          "Total Blocking Time": 8,
+          "Largest Contentful Paint": 824,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 5,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 818,
+          "First Input Delay": 45,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 818,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 6,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 824,
+          "First Input Delay": 93,
+          "Total Blocking Time": 27,
+          "Largest Contentful Paint": 824,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 7,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 820,
+          "First Input Delay": 52,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 820,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 8,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 819,
+          "First Input Delay": 59,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 819,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 9,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 818,
+          "First Input Delay": 18,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 818,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 10,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 821,
+          "First Input Delay": 92,
+          "Total Blocking Time": 38,
+          "Largest Contentful Paint": 821,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 11,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 825,
+          "First Input Delay": 68,
+          "Total Blocking Time": 18,
+          "Largest Contentful Paint": 825,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 12,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 824,
+          "First Input Delay": 131,
+          "Total Blocking Time": 100,
+          "Largest Contentful Paint": 824,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 13,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 818,
+          "First Input Delay": 18,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 818,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 14,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 820,
+          "First Input Delay": 20,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 820,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 15,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 822,
+          "First Input Delay": 83,
+          "Total Blocking Time": 17,
+          "Largest Contentful Paint": 822,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 16,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 820,
+          "First Input Delay": 49,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 820,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 17,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 826,
+          "First Input Delay": 113,
+          "Total Blocking Time": 47,
+          "Largest Contentful Paint": 826,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 18,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 821,
+          "First Input Delay": 47,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 821,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 19,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 823,
+          "First Input Delay": 142,
+          "Total Blocking Time": 81,
+          "Largest Contentful Paint": 823,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 20,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 818,
+          "First Input Delay": 52,
+          "Total Blocking Time": 2,
+          "Largest Contentful Paint": 818,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 21,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 819,
+          "First Input Delay": 50,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 819,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 22,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 821,
+          "First Input Delay": 52,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 821,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 23,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 823,
+          "First Input Delay": 85,
+          "Total Blocking Time": 23,
+          "Largest Contentful Paint": 823,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 24,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 820,
+          "First Input Delay": 126,
+          "Total Blocking Time": 60,
+          "Largest Contentful Paint": 820,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 25,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 819,
+          "First Input Delay": 100,
+          "Total Blocking Time": 34,
+          "Largest Contentful Paint": 819,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 26,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 819,
+          "First Input Delay": 42,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 819,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 27,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 822,
+          "First Input Delay": 46,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 822,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 28,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 821,
+          "First Input Delay": 65,
+          "Total Blocking Time": 1,
+          "Largest Contentful Paint": 821,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 29,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 821,
+          "First Input Delay": 58,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 821,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    },
+    {
+      "run": 30,
+      "metrics": [
+        {
+          "step": "Открытие главной страницы",
+          "First Contentful Paint": 24,
+          "Time to Interactive": 822,
+          "First Input Delay": 98,
+          "Total Blocking Time": 78,
+          "Largest Contentful Paint": 822,
+          "Cumulative Layout Shift": 0
+        }
+      ]
+    }
+  ]
+}

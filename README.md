@@ -14,19 +14,22 @@ pip install -r requirements.txt
 
 ## Структура входных данных
 
-Отчёты лежат рядом со скриптами:
+Отчёты лежат в `input/` в корне проекта. Результаты анализа — в `output/`:
 
 ```text
-e2e/reports/
+input/
 ├── cache-first/
 │   └── flow-desktop-cache_first_metrics.json
 ├── cache-only/
 ├── network-first/
 ├── network-only/
-├── stale-while-revalidate/
+└── stale-while-revalidate/
+
+output/
 ├── comparisons/          # JSON результатов сравнения
-└── charts/               # PNG-графики
-    └── bars/
+├── charts/               # PNG-графики
+│   └── bars/
+└── compare.log
 ```
 
 Имя файла `flow-<profile>-*_metrics.json` определяет **условие** эксперимента:
@@ -58,13 +61,13 @@ JSON-отчёты (strategy/flow-*_metrics.json)
         │         (без warmup-прогона)
         │
         ├──► compare        → descriptive + Mann–Whitney + bootstrap CI
-        │                   → comparisons/<condition>.json
+        │                   → output/comparisons/<condition>.json
         │
         ├──► plot-metrics   → линейные графики метрик по прогонам
-        │                   → charts/<strategy>__<condition>.png
+        │                   → output/charts/<strategy>__<condition>.png
         │
         └──► plot-bars      → столбчатые диаграммы стратегий
-                            → charts/bars/<Condition>-<Stat>.png
+                            → output/charts/bars/<Condition>-<Stat>.png
 ```
 
 1. **Загрузка** — `discover_reports()` находит все `flow-*_metrics.json`, нормализует условие и собирает `MetricsReport`.
@@ -81,35 +84,35 @@ JSON-отчёты (strategy/flow-*_metrics.json)
 
 ## Единый CLI: `analyze_reports.py`
 
-Все команды запускаются из каталога `e2e/reports` (или с указанием пути к файлу).
+Пути `input/` и `output/` считаются от корня проекта, поэтому команды можно запускать из любого каталога.
 
 ### Сравнение стратегий
 
 ```bash
-python analyze_reports.py compare --condition desktop
-python analyze_reports.py compare --condition mobile-slow3g --output-dir ./comparisons
+python data-analyze-script/analyze_reports.py compare --condition desktop
+python data-analyze-script/analyze_reports.py compare --condition mobile-slow3g
 ```
 
-Результат: `comparisons/<condition>.json` и лог `compare.log`.
+Результат: `output/comparisons/<condition>.json` и лог `output/compare.log`.
 
 ### Линейные графики метрик
 
 ```bash
-python analyze_reports.py plot-metrics
-python analyze_reports.py plot-metrics --condition mobile --strategy cache-first
+python data-analyze-script/analyze_reports.py plot-metrics
+python data-analyze-script/analyze_reports.py plot-metrics --condition mobile --strategy cache-first
 ```
 
-Результат: `charts/<strategy>__<condition>.png`.
+Результат: `output/charts/<strategy>__<condition>.png`.
 
 ### Столбчатые диаграммы
 
 ```bash
-python analyze_reports.py plot-bars
-python analyze_reports.py plot-bars --condition desktop --stat median
+python data-analyze-script/analyze_reports.py plot-bars
+python data-analyze-script/analyze_reports.py plot-bars --condition desktop --stat median
 ```
 
 Без `--stat` строятся все три параметра: median, p95, p99.  
-Результат: `charts/bars/<Condition>-<Stat>.png`.
+Результат: `output/charts/bars/<Condition>-<Stat>.png`.
 
 ## Исходные скрипты (эквивалентны subcommands)
 

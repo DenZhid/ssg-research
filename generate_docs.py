@@ -1,4 +1,4 @@
-"""Generate MkDocs condition pages from comparisons JSON and chart assets."""
+"""Generate MkDocs condition pages from output/comparisons JSON."""
 
 from __future__ import annotations
 
@@ -6,9 +6,9 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+OUTPUT_DIR = ROOT / "output"
 DOCS = ROOT / "docs-site" / "docs"
-ASSETS = DOCS / "assets"
-COMPARISONS_DIR = ASSETS / "comparisons"
+COMPARISONS_DIR = OUTPUT_DIR / "comparisons"
 CONDITIONS_DIR = DOCS / "conditions"
 
 CONDITION_TITLES = {

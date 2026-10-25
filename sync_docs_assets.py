@@ -4,7 +4,7 @@ import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-SRC_DIR = ROOT / "data-analyze-script"
+SRC_DIR = ROOT / "output"
 DST_DIR = ROOT / "docs-site" / "docs" / "assets"
 FOLDERS = ("charts", "comparisons")
 
