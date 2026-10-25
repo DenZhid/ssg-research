@@ -1,20 +1,20 @@
-# Анализ отчётов PWA e2e
+# Анализ стратегий кэширования PWA
 
-Скрипты в этой папке читают JSON-метрики прогонов Playwright/LHCI-подобных flow-тестов и строят статистику и графики по стратегиям кэширования.
+JSON-метрики прогонов Playwright / LHCI-подобных flow-тестов сравниваются по стратегиям Service Worker и публикуются сайтом MkDocs.
 
-Исходные модули (`report_utils.py`, `compare.py`, `plot_metrics.py`, `plot_bars.py`) сохранены. Единая точка входа — `analyze_reports.py`.
+Исходные данные — `input/`. Расчёт — модули в `data-analyze-script/`. Сборка сайта — `nox -s site`.
 
 ## Зависимости
 
+Python 3.13+. Пакеты перечислены в `pyproject.toml`: `matplotlib`, `numpy`, `scipy`, `mkdocs`.
+
 ```bash
-pip install -r requirements.txt
+poetry install
 ```
 
-Нужны: `matplotlib`, `numpy`, `scipy`.
+Сборка сайта ставит то же самое внутрь сессии nox и дополнительно требует пакет `nox`.
 
-## Структура входных данных
-
-Отчёты лежат в `input/` в корне проекта. Результаты анализа — в `output/`:
+## Входные данные
 
 ```text
 input/
@@ -24,63 +24,51 @@ input/
 ├── network-first/
 ├── network-only/
 └── stale-while-revalidate/
-
-output/
-├── comparisons/          # JSON результатов сравнения
-├── charts/               # PNG-графики
-│   └── bars/
-└── compare.log
 ```
 
-Имя файла `flow-<profile>-*_metrics.json` определяет **условие** эксперимента:
+Имя папки — стратегия. Префикс в `flow-<profile>-*_metrics.json` — условие эксперимента:
 
-| Префикс в имени файла | Нормализованное условие |
-|-----------------------|-------------------------|
-| `desktop`             | `desktop`               |
-| `mobile`              | `mobile`                |
+| Префикс в имени файла | Условие |
+|-----------------------|---------|
+| `desktop` | `desktop` |
+| `mobile` | `mobile` |
 | `desktop3g` / `desktop-slow3g` | `desktop-slow3g` |
-| `mobile3g` / `mobile-slow3g`   | `mobile-slow3g`  |
+| `mobile3g` / `mobile-slow3g` | `mobile-slow3g` |
 
-Имя **папки** — стратегия кэширования (`cache-first`, `network-only` и т.д.).
+В JSON: `baseUrl`, `finishedAt` и массив `runs` с шагами и метриками FCP, TTI, FID, TBT, LCP, CLS. Первый прогон (`WARMUP_RUNS = 1`) — разогрев кэша, из анализа он исключается.
 
-Внутри JSON: `baseUrl`, `finishedAt`, массив `runs` с шагами и метриками Web Vitals:
+## Расчёт
 
-- FCP, TTI, FID, TBT, LCP, CLS
+Логика разложена по модулям. `analyze_reports.py` только вызывает их из командной строки.
 
-Первый прогон (`WARMUP_RUNS = 1`) считается разогревом кэша и **исключается** из анализа.
+| Модуль | Что делает |
+|--------|------------|
+| `report_utils.py` | Поиск JSON, разбор условия, ряды метрик без warmup |
+| `compare.py` | Median / P95 / P99, Mann–Whitney U, bootstrap CI |
+| `plot_metrics.py` | Линейные графики по прогонам |
+| `plot_bars.py` | Столбчатые диаграммы стратегий |
+| `analyze_reports.py` | Подкоманды `compare`, `plot-metrics`, `plot-bars` |
 
-## Общий флоу
+```bash
+python data-analyze-script/analyze_reports.py compare --condition desktop
+python data-analyze-script/analyze_reports.py plot-metrics --condition mobile --strategy cache-first
+python data-analyze-script/analyze_reports.py plot-bars --condition desktop --stat median
+```
+
+Без `--stat` строятся median, p95 и p99. Те же команды есть у `compare.py`, `plot_metrics.py` и `plot_bars.py`.
+
+Результаты пишутся в `output/` (каталог в `.gitignore`):
 
 ```text
-JSON-отчёты (strategy/flow-*_metrics.json)
-        │
-        ▼
-  discover_reports()     — обход папок, парсинг профиля из имени файла
-        │
-        ├─ get_analysis_runs() / extract_metric_series()
-        │         (без warmup-прогона)
-        │
-        ├──► compare        → descriptive + Mann–Whitney + bootstrap CI
-        │                   → output/comparisons/<condition>.json
-        │
-        ├──► plot-metrics   → линейные графики метрик по прогонам
-        │                   → output/charts/<strategy>__<condition>.png
-        │
-        └──► plot-bars      → столбчатые диаграммы стратегий
-                            → output/charts/bars/<Condition>-<Stat>.png
+output/
+├── comparisons/<condition>.json
+├── charts/<strategy>__<condition>.png
+├── charts/bars/<Condition>-<Stat>.png
+├── compare.log
+├── .cache/manifest.json    # хеши входов и холодное время
+├── cache-report.json
+└── build-info.json         # коммит, дата сборки, версия input/
 ```
-
-1. **Загрузка** — `discover_reports()` находит все `flow-*_metrics.json`, нормализует условие и собирает `MetricsReport`.
-2. **Подготовка рядов** — из каждого отчёта берутся значения метрик по шагам, без warmup.
-3. **Сравнение** — внутри одного условия стратегии сравниваются попарно (Mann–Whitney U, bootstrap CI разности медиан) и считается описательная статистика (median / P95 / P99).
-4. **Визуализация** — либо динамика метрик по прогонам (`plot-metrics`), либо сводные бары стратегий по метрикам (`plot-bars`).
-
-Типичный порядок работы после прогона e2e:
-
-1. Убедиться, что в папках стратегий есть свежие `*_metrics.json`.
-2. Посмотреть динамику: `plot-metrics`.
-3. Сравнить стратегии в нужном условии: `compare`.
-4. Построить сводные бары: `plot-bars`.
 
 ## Сборка сайта
 
@@ -88,53 +76,10 @@ JSON-отчёты (strategy/flow-*_metrics.json)
 nox -s site
 ```
 
-Сессия читает `input/`, пересчитывает только изменившиеся сравнения и графики, собирает страницы и вызывает `mkdocs build`. В том же запуске второй проход показывает выигрыш кэша по времени. На каждой странице — хеш коммита, дата сборки и версия набора данных.
+Сессия вызывает `pipeline.py`, затем `sync_docs_assets.py`, `generate_docs.py` и `mkdocs build`.
 
-## Единый CLI: `analyze_reports.py`
+`pipeline.py` считает SHA-256 исходных JSON. Совпавший хеш не пересчитывается. В одном запуске два прохода: второй попадает в кэш и печатает выигрыш по времени относительно холодного пересчёта. Правка одного файла пересчитывает только сравнение этого условия, его линейный график и бар-графики.
 
-Пути `input/` и `output/` считаются от корня проекта, поэтому команды можно запускать из любого каталога.
+`sync_docs_assets.py` копирует графики и JSON в `docs-site/docs/assets/`. `generate_docs.py` собирает `docs-site/docs/conditions/*.md`. Хук `docs-site/hooks.py` дописывает на каждую страницу хеш коммита, дату сборки UTC, версию набора данных и сводку кэша.
 
-### Сравнение стратегий
-
-```bash
-python data-analyze-script/analyze_reports.py compare --condition desktop
-python data-analyze-script/analyze_reports.py compare --condition mobile-slow3g
-```
-
-Результат: `output/comparisons/<condition>.json` и лог `output/compare.log`.
-
-### Линейные графики метрик
-
-```bash
-python data-analyze-script/analyze_reports.py plot-metrics
-python data-analyze-script/analyze_reports.py plot-metrics --condition mobile --strategy cache-first
-```
-
-Результат: `output/charts/<strategy>__<condition>.png`.
-
-### Столбчатые диаграммы
-
-```bash
-python data-analyze-script/analyze_reports.py plot-bars
-python data-analyze-script/analyze_reports.py plot-bars --condition desktop --stat median
-```
-
-Без `--stat` строятся все три параметра: median, p95, p99.  
-Результат: `output/charts/bars/<Condition>-<Stat>.png`.
-
-## Исходные скрипты (эквивалентны subcommands)
-
-| Файл | Эквивалент в `analyze_reports.py` |
-|------|-----------------------------------|
-| `report_utils.py` | общие хелперы (встроено) |
-| `compare.py` | `compare` |
-| `plot_metrics.py` | `plot-metrics` |
-| `plot_bars.py` | `plot-bars` |
-
-Старые скрипты по-прежнему можно вызывать напрямую, например:
-
-```bash
-python compare.py --condition desktop
-python plot_metrics.py --condition mobile
-python plot_bars.py --stat p95
-```
+Публикация — `.github/workflows/pages.yml`: push в `master` запускает `nox -s site` и выкладывает сайт на GitHub Pages и Helios.

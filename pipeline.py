@@ -20,22 +20,18 @@ os.environ["MPLBACKEND"] = "Agg"
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "data-analyze-script"))
 
-from analyze_reports import (  # noqa: E402
-    BARS_DIR,
-    CHARTS_DIR,
+from compare import (  # noqa: E402
     COMPARISONS_DIR,
-    COMPARE_LOG_FILE,
-    CONDITION_TITLES,
-    CONDITIONS,
-    STAT_PARAMS,
+    LOG_FILE as COMPARE_LOG_FILE,
     analyze_condition,
-    discover_reports,
-    group_reports_by_condition,
-    plot_condition_stat,
-    plot_report,
     save_comparison,
-    setup_compare_logging,
+    setup_logging as setup_compare_logging,
 )
+from plot_bars import BARS_DIR, CONDITION_TITLES, STAT_PARAMS, plot_condition_stat  # noqa: E402
+from plot_metrics import CHARTS_DIR, plot_report  # noqa: E402
+from report_utils import discover_reports, group_reports_by_condition  # noqa: E402
+
+CONDITIONS = tuple(CONDITION_TITLES)
 
 OUTPUT_DIR = ROOT / "output"
 INPUT_DIR = ROOT / "input"

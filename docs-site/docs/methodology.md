@@ -53,26 +53,3 @@
 |-----|------|------------|
 | Сводные бары | `assets/charts/bars/<Condition>-<Stat>.png` | Стратегии × метрики (median / P95 / P99) |
 | Линейные графики | `assets/charts/<strategy>__<condition>.png` | Динамика метрик по прогонам |
-
-## Пайплайн
-
-Сборка сайта — `nox -s site`. Она читает `input/`, пересчитывает только те сравнения и графики, у которых изменился SHA-256 исходных JSON, и в том же запуске делает второй проход. Второй проход попадает в кэш и показывает выигрыш по времени относительно холодного пересчёта.
-
-```text
-nox -s site
-    │
-    ▼
-pipeline.py
-    input/**/*.json → кэш по SHA-256 → output/charts/ + output/comparisons/
-    output/cache-report.json + output/build-info.json
-    │
-    ▼
-sync_docs_assets.py → docs/assets/
-    │
-    ▼
-generate_docs.py → conditions/*.md
-    │
-    ▼
-mkdocs build
-    хук дописывает хеш коммита, дату сборки, версию набора данных и сводку кэша
-```
