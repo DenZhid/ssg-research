@@ -1,5 +1,7 @@
-./ssg-research
-./site
-./build
-./dist
-./__pycache__
+/ssg-research/
+/docs-site/site/
+/docs-site/assets/
+/build/
+/dist/
+__pycache__/
+/output/

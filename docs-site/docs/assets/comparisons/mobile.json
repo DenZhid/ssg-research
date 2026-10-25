@@ -1,6 +1,6 @@
 {
   "condition": "mobile",
-  "generated_at": "2026-10-17T10:59:26.061863+00:00",
+  "generated_at": "2026-10-25T11:30:37.281086+00:00",
   "warmup_runs_excluded": 1,
   "strategies": [
     "cache-first",
