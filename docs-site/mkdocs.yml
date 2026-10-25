@@ -1,5 +1,6 @@
 site_name: PWA Cache Strategies Performance
 site_description: Результаты сравнения стратегий кэширования PWA по Web Vitals
+site_url: https://denzhid.github.io/ssg-research/
 theme:
   name: mkdocs
   language: ru
