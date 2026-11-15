@@ -1,6 +1,11 @@
 site_name: PWA Cache Strategies Performance
 site_description: Результаты сравнения стратегий кэширования PWA по Web Vitals
 site_url: https://denzhid.github.io/ssg-research/
+copyright: >
+  Тексты, таблицы и графики © 2026 DenZhid,
+  <a href="https://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0</a>.
+  Код анализа и сборки —
+  <a href="https://github.com/DenZhid/ssg-research/blob/master/LICENSE-MIT">MIT</a>.
 theme:
   name: mkdocs
   language: ru

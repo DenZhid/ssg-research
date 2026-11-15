@@ -83,3 +83,16 @@ nox -s site
 `sync_docs_assets.py` копирует графики и JSON в `docs-site/docs/assets/`. `generate_docs.py` собирает `docs-site/docs/conditions/*.md`. Хук `docs-site/hooks.py` дописывает на каждую страницу хеш коммита, дату сборки UTC, версию набора данных и сводку кэша.
 
 Публикация — `.github/workflows/pages.yml`: push в `master` запускает `nox -s site` и выкладывает сайт на GitHub Pages и Helios.
+
+## Лицензии
+
+Код и контент лицензируются раздельно.
+
+| Что | Лицензия | Текст |
+|-----|----------|--------|
+| Код анализа, сборки и конфигурация | MIT | [LICENSE-MIT](LICENSE-MIT) |
+| Тексты сайта, графики и JSON в `input/` | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.ru) | [LICENSE-CC-BY-4.0](LICENSE-CC-BY-4.0) |
+
+К коду относятся `data-analyze-script/*.py`, `pipeline.py`, `generate_docs.py`, `sync_docs_assets.py`, `noxfile.py`, `pyproject.toml`, `docs-site/hooks.py`, `docs-site/mkdocs.yml` и `.github/`.
+
+К контенту относятся страницы в `docs-site/docs/`, метрики в `input/` и тексты `README.md` и `AGENTS.md`. При использовании контента укажите автора (DenZhid), ссылку на источник и ссылку на лицензию.
