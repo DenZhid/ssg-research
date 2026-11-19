@@ -70,8 +70,8 @@ jobs:
           name: helios-site
           path: site
 
-      # Secrets: HELIOS_USER (sXXXXXX), HELIOS_SSH_KEY (private deploy key).
-      # Public key goes into ~/.ssh/authorized_keys on Helios once.
+      # Секреты: HELIOS_USER (sXXXXXX), HELIOS_SSH_KEY (private deploy key).
+      # Публичный ключ добавляется в ~/.ssh/authorized_keys на Helios один раз.
       - name: Upload site to Helios public_html/ssg-research
         env:
           HELIOS_USER: ${{ secrets.HELIOS_USER }}
