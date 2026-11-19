@@ -21,7 +21,7 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
+          "First Contentful Paint": 1000000,
           "Time to Interactive": 54,
           "First Input Delay": 51,
           "Total Blocking Time": 0,
