@@ -1,17 +1,17 @@
 {
   "baseUrl": "http://localhost:4173",
-  "finishedAt": "2026-06-24T08:53:28.810Z",
+  "finishedAt": "2026-11-20T13:38:36.279Z",
   "runs": [
     {
       "run": 1,
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 1296,
-          "Time to Interactive": 8717,
-          "First Input Delay": 70,
-          "Total Blocking Time": 20,
-          "Largest Contentful Paint": 8717,
+          "First Contentful Paint": 1464,
+          "Time to Interactive": 4122,
+          "First Input Delay": 61,
+          "Total Blocking Time": 22,
+          "Largest Contentful Paint": 4083,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -21,11 +21,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 819,
-          "First Input Delay": 75,
-          "Total Blocking Time": 20,
-          "Largest Contentful Paint": 819,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 958,
+          "First Input Delay": 79,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 958,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -35,11 +35,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 77,
-          "Total Blocking Time": 11,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 948,
+          "First Input Delay": 65,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 948,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -49,11 +49,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 823,
-          "First Input Delay": 23,
+          "First Contentful Paint": 30,
+          "Time to Interactive": 953,
+          "First Input Delay": 56,
           "Total Blocking Time": 0,
-          "Largest Contentful Paint": 823,
+          "Largest Contentful Paint": 950,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -63,11 +63,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 45,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 957,
+          "First Input Delay": 69,
+          "Total Blocking Time": 1,
+          "Largest Contentful Paint": 953,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -77,11 +77,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 821,
-          "First Input Delay": 98,
-          "Total Blocking Time": 32,
-          "Largest Contentful Paint": 821,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 949,
+          "First Input Delay": 70,
+          "Total Blocking Time": 17,
+          "Largest Contentful Paint": 949,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -91,11 +91,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 48,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 964,
+          "First Input Delay": 38,
+          "Total Blocking Time": 35,
+          "Largest Contentful Paint": 961,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -105,11 +105,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 821,
-          "First Input Delay": 21,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 947,
+          "First Input Delay": 55,
           "Total Blocking Time": 0,
-          "Largest Contentful Paint": 821,
+          "Largest Contentful Paint": 940,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -119,11 +119,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 825,
-          "First Input Delay": 124,
-          "Total Blocking Time": 63,
-          "Largest Contentful Paint": 825,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 954,
+          "First Input Delay": 68,
+          "Total Blocking Time": 24,
+          "Largest Contentful Paint": 944,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -133,11 +133,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 817,
-          "First Input Delay": 17,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 817,
+          "First Contentful Paint": 32,
+          "Time to Interactive": 957,
+          "First Input Delay": 80,
+          "Total Blocking Time": 33,
+          "Largest Contentful Paint": 954,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -147,11 +147,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 821,
-          "First Input Delay": 50,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 821,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 958,
+          "First Input Delay": 71,
+          "Total Blocking Time": 5,
+          "Largest Contentful Paint": 956,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -161,11 +161,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 819,
-          "First Input Delay": 19,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 819,
+          "First Contentful Paint": 30,
+          "Time to Interactive": 967,
+          "First Input Delay": 100,
+          "Total Blocking Time": 31,
+          "Largest Contentful Paint": 959,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -175,11 +175,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 823,
-          "First Input Delay": 123,
-          "Total Blocking Time": 57,
-          "Largest Contentful Paint": 823,
+          "First Contentful Paint": 30,
+          "Time to Interactive": 956,
+          "First Input Delay": 84,
+          "Total Blocking Time": 16,
+          "Largest Contentful Paint": 946,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -189,11 +189,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 825,
-          "First Input Delay": 146,
-          "Total Blocking Time": 80,
-          "Largest Contentful Paint": 825,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 955,
+          "First Input Delay": 72,
+          "Total Blocking Time": 16,
+          "Largest Contentful Paint": 949,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -203,11 +203,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 819,
-          "First Input Delay": 107,
-          "Total Blocking Time": 41,
-          "Largest Contentful Paint": 819,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 957,
+          "First Input Delay": 113,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 949,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -217,11 +217,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 818,
-          "First Input Delay": 18,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 818,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 948,
+          "First Input Delay": 90,
+          "Total Blocking Time": 20,
+          "Largest Contentful Paint": 948,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -231,11 +231,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 74,
-          "Total Blocking Time": 25,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 30,
+          "Time to Interactive": 966,
+          "First Input Delay": 65,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 954,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -245,11 +245,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 825,
-          "First Input Delay": 56,
-          "Total Blocking Time": 6,
-          "Largest Contentful Paint": 825,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 948,
+          "First Input Delay": 75,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 939,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -259,11 +259,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 821,
-          "First Input Delay": 130,
-          "Total Blocking Time": 64,
-          "Largest Contentful Paint": 821,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 946,
+          "First Input Delay": 85,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 945,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -273,11 +273,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 819,
-          "First Input Delay": 19,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 819,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 964,
+          "First Input Delay": 113,
+          "Total Blocking Time": 11,
+          "Largest Contentful Paint": 959,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -287,11 +287,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 819,
-          "First Input Delay": 96,
-          "Total Blocking Time": 30,
-          "Largest Contentful Paint": 819,
+          "First Contentful Paint": 32,
+          "Time to Interactive": 960,
+          "First Input Delay": 111,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 950,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -301,11 +301,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 819,
-          "First Input Delay": 60,
-          "Total Blocking Time": 10,
-          "Largest Contentful Paint": 819,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 952,
+          "First Input Delay": 71,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 951,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -315,11 +315,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 818,
-          "First Input Delay": 86,
-          "Total Blocking Time": 20,
-          "Largest Contentful Paint": 818,
+          "First Contentful Paint": 32,
+          "Time to Interactive": 944,
+          "First Input Delay": 78,
+          "Total Blocking Time": 15,
+          "Largest Contentful Paint": 944,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -329,11 +329,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 91,
-          "Total Blocking Time": 25,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 948,
+          "First Input Delay": 113,
+          "Total Blocking Time": 30,
+          "Largest Contentful Paint": 948,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -343,11 +343,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 20,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 955,
+          "First Input Delay": 43,
+          "Total Blocking Time": 35,
+          "Largest Contentful Paint": 947,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -357,11 +357,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 822,
-          "First Input Delay": 104,
-          "Total Blocking Time": 57,
-          "Largest Contentful Paint": 822,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 956,
+          "First Input Delay": 63,
+          "Total Blocking Time": 20,
+          "Largest Contentful Paint": 955,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -371,11 +371,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 819,
-          "First Input Delay": 19,
-          "Total Blocking Time": 0,
-          "Largest Contentful Paint": 819,
+          "First Contentful Paint": 79,
+          "Time to Interactive": 965,
+          "First Input Delay": 15,
+          "Total Blocking Time": 16,
+          "Largest Contentful Paint": 952,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -385,11 +385,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 825,
-          "First Input Delay": 105,
-          "Total Blocking Time": 39,
-          "Largest Contentful Paint": 825,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 965,
+          "First Input Delay": 56,
+          "Total Blocking Time": 11,
+          "Largest Contentful Paint": 951,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -399,11 +399,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 166,
-          "Total Blocking Time": 116,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 954,
+          "First Input Delay": 57,
+          "Total Blocking Time": 4,
+          "Largest Contentful Paint": 949,
           "Cumulative Layout Shift": 0
         }
       ]
@@ -413,11 +413,11 @@
       "metrics": [
         {
           "step": "Открытие главной страницы",
-          "First Contentful Paint": 24,
-          "Time to Interactive": 820,
-          "First Input Delay": 113,
-          "Total Blocking Time": 48,
-          "Largest Contentful Paint": 820,
+          "First Contentful Paint": 31,
+          "Time to Interactive": 959,
+          "First Input Delay": 30,
+          "Total Blocking Time": 0,
+          "Largest Contentful Paint": 948,
           "Cumulative Layout Shift": 0
         }
       ]
